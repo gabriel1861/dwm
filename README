@@ -1,3 +1,29 @@
+# v0.1
+
+安装suckless的dwm, st和dmenu
+
+将dwm.desktop拷贝到/usr/share/xsessions目录下, 使得sddm中可以选择dwm
+
+在~/.xinitrc中增加exec dwm这一行, 可以在tty下使用startx启动dwm
+
+
+
+config.h
+
+1. 修改MODKEY为Mod4Mask(即super键), 默认为Mod1Mask即alt键
+
+
+
+
+
+打上补丁dwm-autostart设置开机启动项, 增加开机脚本
+
+编写状态栏脚本
+
+
+
+打上补丁[dwm-alpha-20201019-61bb8b2.diff](https://dwm.suckless.org/patches/alpha/dwm-alpha-20201019-61bb8b2.diff), 使得状态栏半透明, 可能和窗口边框半透明冲突的[dwm-fixborders-6.2.diff](https://dwm.suckless.org/patches/alpha/dwm-fixborders-6.2.diff)补丁, 也没有打st透明的补丁[st-alpha-0.8.5.diff](https://st.suckless.org/patches/alpha/st-alpha-20220206-0.8.5.diff)
+
 dwm - dynamic window manager
 ============================
 dwm is an extremely fast, small, and dynamic window manager for X.
